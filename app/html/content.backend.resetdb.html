@@ -1,0 +1,13 @@
+<h1>Datenbanken zurücksetzen</h1>
+
+<div class="message b">
+	<p/>Der folgende Link sorgt dafür, dass die Datenbank auf den Ausgangszustand zurückgesetzt wird. Dies umfasst folgende Operationen:</p>
+	<ul>
+		<li>Tabelle mit Sessiondaten (session) wird komplett geleert (ein erneutes Anmelden ist erforderlich)</li>
+		<li>Tabelle mit Kursanträgen (order) wird komplett geleert</li>
+		<li>Tabelle mit Seminargruppen (sg) wird komplett geleert</li>
+		<li style="text-decoration:line-through">Tabelle mit Benutzern (user) wird - bis auf Benutzer mit Adminrechten - geleert</li>
+	</ul>
+	<p>Alle anderen Tabellen (Fachbereiche, Studiengänge, Kurse) bleiben unberührt.</p>
+</div>
+<div><a href="{self.url}?do=resetdb" target="_self">Datenbanken zurücksetzen</a></div>

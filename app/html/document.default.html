@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>{head.title}</title>
+		{head.include.css}
+    <meta http-equiv="cache-control" content="no-store" />
+	</head>
+	<body>
+    <div class="navigation">
+      <a class="home" title="Zur Kursbeantragung" href="?" target="_self"></a>
+      <div class="mainmenu">
+        {navigation}
+      </div>
+      <div class="th"></div>
+      <div class="clear"></div>
+    </div>
+    <div class="layout">
+      <div class="content">
+        {body.content}
+      </div>
+      <div class="copyright">&copy; Technische Hochschule Wildau [FH]</div>
+    </div>
+    {head.include.js}
+	</body>
+</html>

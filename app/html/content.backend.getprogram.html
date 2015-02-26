@@ -1,0 +1,18 @@
+<h1>Liste mit aktuellen Kursen anhand des Stundenplanes</h1>
+{status.message}
+
+{area.status}
+
+<h2>Stundenplan auslesen</h2>
+<div class="message b">
+	<p>Das Auslesen des Stundenplanes besteht aus folgenden Schritten:</p>
+	<ol>
+		<li>Schritt: Ermitteln der vorhandenen Seminargruppen</li>
+		<li>Schritt: Stundenpläne der Seminargruppen runterladen</li>
+		<li>Schritt: Zusammenfügen und Sortieren der Stundenpläne</li>
+	</ol>
+	<p>Da dieser Prozess auf vielen Stundenplan-Aufrufen besteht, wird dieser auf mehrere Teilprozesse aufgeteilt, die nacheinander im Hintergrund dieser(!) Seite ausgeführt werden (Ajax-Request).</p>
+</div>
+
+
+<input type="button" value="{dl.button.text}" class="b" id="{dl.button.action}"/><br/><br/>

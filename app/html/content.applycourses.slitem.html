@@ -1,0 +1,61 @@
+<div class="c">
+  <div class="title t">
+    <div class="tc w80">
+      <p class="t">{name}</p>
+    </div><div class="tc w20">
+      <p class="d">Details und Optionen anzeigen</p>
+    </div>
+  </div>
+  <div class="content">
+    <div class="t">
+
+      <div class="tr">
+        <div class="tc w30">
+          <p>Kurszuordnung:</p>
+        </div><div class="tc w70">
+          <div>{dep} > {program} > {name}</div>
+        </div>
+      </div>
+
+      <div class="tr">
+        <div class="tc w30">
+          <p>Seminargruppen:</p>
+        </div><div class="tc w70">
+          <p>{sg}</p>
+        </div>
+      </div>
+
+      <form method="post" action="{self.url}?do=orderupdate">
+
+        <div class="tr">
+          <div class="tc w30">
+            <p>Alte Kursinhalte übernehmen:</p>
+          </div><div class="tc w70">
+            {import}
+          </div>
+        </div>
+
+        <div class="tr">
+          <div class="tc w30">
+            <p>Anmerkungen:</p>
+          </div><div class="tc w70">
+            <textarea name="fad" rows="7" placeholder="Anmerkungen und Hinweise für das learn@wildau-Team ..."></textarea>
+          </div>
+        </div>
+
+        <input type="hidden" name="fid" value="{id}"/>
+        <input type="hidden" name="fst" value="2"/>
+        <input type="hidden" name="fti" value="1"/>
+
+        <div class="tr">
+          <div class="tc w30"></div><div class="tc w70">
+            <input type="submit" class="b" value="Kurs beantragen"/>
+            <input type="button" class="b dco" value="Kursantrag entfernen" data-url="{self.url}?do=orderhide&cid={id}"/>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>

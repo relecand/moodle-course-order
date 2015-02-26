@@ -1,0 +1,168 @@
+<div class="content-order-form">
+  <form id="course-request" action="{self.url}?do=requestcourse" method="post" autocomplete="off">
+    <div class="t">
+  		<div class="tc left w30">
+  			<div class="menu">
+  				<div class="item" id="vt">
+  					<h1><p class="step"></p>Videoanleitung</h1>
+  				</div>
+  				<div class="item" id="cn">
+  					<h1><p class="step">Schritt 1</p>Welcher Kurs?</h1>
+            <div>
+  					  <input class="t" type="text" name="cn" value="Übernommener Titel" readonly/>
+            </div>
+  				</div>
+  				<div class="item" id="sg">
+  					<h1><p class="step">Schritt 2</p>Welche Seminargruppen?</h1>
+  					<div>
+  						<div class="help"></div>
+  					</div>
+  				</div>
+  				<div class="item" id="ad">
+  					<h1><p class="step">Schritt 3</p>Anmerkungen?</h1>
+            <div>
+              <input class="t" type="text" name="ca" readonly/>
+            </div>
+  				</div>
+  				<div class="item" id="pr">
+  					<h1><p class="step">Schritt 4</p>Kursantrag abschließen</h1>
+  				</div>
+  			</div>
+  		</div><div class="tc right w70">
+  			<div class="content" id="vt">
+  				<h1>Videoanleitung zum Erstellen von Kursanträgen.</h1>
+  				<iframe width="853" height="480" src="//www.youtube.com/embed/ZBAGEeOms-8?rel=0" frameborder="0" allowfullscreen></iframe>
+  			</div>
+  			<div class="content" id="cn">
+  				<h1>Kursbezeichnung</h1>
+          <p class="message g" id="success">Vielen Dank. Wir werden Ihren Antrag innerhalb der nächsten 48 Stunden bearbeiten.</p>
+  				<div class="a">
+  					<div class="ai">
+  						<div class="title">
+  							<div class="icon checkbox-unchecked"></div>
+  							<span>Inhalte aus altem Kurs übernehmen</span>
+  						</div>
+  						<div class="ac">
+                <p class="message d">Die Auswahl von Kursen zur Inhaltsübernahme funktioniert nur in Verbindung mit einem funktionierendem Moodle samt Inhalten und Nutzerkonten.</p>
+                {select.course}
+            	</div>
+  					</div>
+  					<div class="ai">
+  						<div class="title">
+  							<div class="icon checkbox-unchecked"></div>
+  							<span>Neuen Kurs erstellen</span>
+  						</div>
+  						<div class="ac">
+                <p class="message d">TODO: Kursliste einpflegen ...</p>
+  							<div class="t">
+  								<div class="tr">
+  									<div class="tc w30 vc">Studiengang/Einrichtung:</div><div class="tc w70">
+  										{select.program}
+  									</div>
+  								</div>
+  								<div class="tr">
+  									<div class="tc w30 vc">Kurs:</div><div class="tc w70">
+  										<select name="co" id="cns">
+  											<option value="false" selected>Bitte wählen Sie einen Studiengang</option>
+  										</select>
+                      <input type="text" name="cnm" id="cni" class="t hide" placeholder="Bitte geben Sie einen Kursnamen ein"/>
+  									</div>
+  								</div>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  			<div class="content" id="sg">
+  				<h1>Seminargruppen auswählen</h1>
+  				<p class="message d">TODO: Seminargruppenauswahl einbauen ...</p>
+
+          <div class="tr">
+            <div class="tc w30 vc">Welche Seminargruppen?</div><div class="tc w70">
+              <select name="csg">
+                  <option value="1" id="csg">Seminargruppen des Studienganges</option>
+                  <option value="0">Alle Seminargruppen</option>
+              </select>
+            </div>
+          </div>
+
+  				<div class="t">
+  					<div class="tr head">
+  						<div class="tc w30">Studiengang</div><div class="tc w10">Jahrgang</div><div class="tc w60">Seminargruppen</div>
+  					</div>
+
+  					<div class="tg">
+  						<div class="tr">
+  							<div class="tc w30 vc">Bachelor - Maschinenbau</div><div class="tc w10">
+	  							<div class="smgrp all">M13</div>
+	  						</div><div class="tc w60">
+	  							<div class="smgrp">M1/13</div>
+	  							<div class="smgrp">M2/13</div>
+	  							<div class="smgrp">M3/13</div>
+	  						</div>
+  						</div>
+  						<div class="tr">
+  							<div class="tc w30 vc"></div><div class="tc w10">
+	  							<div class="smgrp all">M12</div>
+	  						</div><div class="tc w60">
+	  							<div class="smgrp">M12_Konstruktion</div>
+	  							<div class="smgrp">M12_Verfahrenstechnik</div>
+	  							<div class="smgrp">M12_Produktionstechnik</div>
+	  						</div>
+  						</div>
+  						<div class="tr">
+  							<div class="tc w30 vc"></div><div class="tc w10">
+	  							<div class="smgrp all">M11</div>
+	  						</div><div class="tc w60">
+	  							<div class="smgrp">M1/11</div>
+	  							<div class="smgrp">M2/11</div>
+	  							<div class="smgrp">M3/11</div>
+	  						</div>
+  						</div>
+  					</div>
+
+  					<div class="tg">
+  						<div class="tr">
+  							<div class="tc w30 vc">Bachelor - Maschinenbau (dual)</div><div class="tc w10">
+	  							<div class="smgrp all">MD13</div>
+	  						</div><div class="tc w60"></div>
+  						</div>
+  						<div class="tr">
+  							<div class="tc w30 vc"></div><div class="tc w10">
+	  							<div class="smgrp all">MD12</div>
+	  						</div><div class="tc w60"></div>
+  						</div>
+  						<div class="tr">
+  							<div class="tc w30 vc"></div><div class="tc w10">
+	  							<div class="smgrp all">MD11</div>
+	  						</div><div class="tc w60"></div>
+  						</div>
+  					</div>
+
+  				</div>
+  			</div>
+  			<div class="content" id="ad">
+  				<h1>Anmerkungen</h1>
+  				<p class="message b">Hier können Sie weitere Wünsche und Hinweise angeben,
+  				welche bei der Erstellung Ihres Kurses berücksichtigt werden.<br/>
+  				Darüber hinaus können Sie hier einen Link zur entsprechenden Modulbeschreibung angeben.</p>
+  				<textarea name="ad" rows="7" placeholder="Anmerkungen und Hinweise für das learn@wildau-Team ..."></textarea>
+  			</div>
+
+        <div class="content" id="pr">
+          <h1>Kursantrag abschließen</h1>
+          <p class="message b">Bitte prüfen Sie vor dem Absenden Ihres Kursantrages noch einmal Ihre Eingaben auf der linken Seite. <br/>Ein Nachträgliches Ändern der Daten ist nicht möglich.</p>
+          <p class="message r" id="missingname">Achtung: Die müssen mindestens eine <a href="#" class="itemelement" id="cn" target="_self">Kursbezeichnung auswählen</a>, um einen Kurs beantragen zu können.</p>
+          <input type="hidden" name="fsm"    value="{semester}"/>
+          <input type="hidden" name="fcs"    value=""/>
+          <input type="hidden" name="fcn"    value=""/>
+          <input type="hidden" name="fsg"    value=""/>
+          <input type="hidden" name="fad"    value=""/>
+          <input type="hidden" name="fis"    value=""/>
+          <input type="hidden" name="fic"    value=""/>
+          <input type="submit" name="submit" value="Kursantrag absenden" class="s"/>
+        </div>
+  		</div>
+  	</div>
+  </form>
+</div>
